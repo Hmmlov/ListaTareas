@@ -76,7 +76,7 @@
                    Margin="0,-8,0,0"/>
             <StackLayout Spacing="15">
                 <ScrollView Margin="0" Padding="0">
-                    <ListView ItemsSource="{Binding ListaTareas}" RowHeight="150">
+                    <ListView ItemsSource="{Binding ListaTareas}" RowHeight="120">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
@@ -125,10 +125,7 @@
                         </ListView.ItemTemplate>
                     </ListView>
                 </ScrollView>
-            
-
-            </StackLayout>
-            <Button Text="+" 
+                <Button Text="+" 
                     WidthRequest="50"
                     Font="20" 
                     HeightRequest="50" 
@@ -139,6 +136,9 @@
                     TextColor="Azure" 
                     CornerRadius="30"
                     Margin="0,0,20,20"/>
+
+            </StackLayout>
+            <Button Text="Volver a Lista" Command="{Binding ListaCommand}" VerticalOptions="StartAndExpand"/>   
         </StackLayout>
 
     </Grid>

@@ -26,7 +26,8 @@ namespace ListaTareas
         public App()
         {
             InitializeComponent();
-            MainPage = new PaginaPrincipal();
+            MainPage = new Listas();
+            //MainPage = new MenuPage();
         }
 
         protected override void OnStart()

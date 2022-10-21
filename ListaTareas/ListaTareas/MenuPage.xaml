@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaTareas.MenuPage"
+             xmlns:local="clr-namespace:ListaTareas.Vistas">
+    <FlyoutItem Title="Menú"
+                Shell.TabBarIsVisible="False"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Lista Tareas" IsTabStop="True" ContentTemplate="{DataTemplate local:Listas}" />
+        <ShellContent Title="Como debío ser" IsTabStop="True" ContentTemplate="{DataTemplate local:PaginaPrincipal}" />
+
+    </FlyoutItem>
+</Shell>

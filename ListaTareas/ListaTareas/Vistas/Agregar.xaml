@@ -5,10 +5,13 @@
              Title="AgregarTarea">
     <ContentPage.Content>
         <StackLayout BackgroundColor="Black">
-            <Entry Text="{Binding Titulo}" TextTransform="Uppercase" Background="#2c3e50" TextColor="white"/>
-                    <Entry Text="{Binding Descripcion}" BackgroundColor="#2c3e50" TextColor="white"/>
-                    <Entry Text="{Binding Estado}" BackgroundColor="#2c3e50" TextColor="white"/>
+            <Label Text="NUEVA TAREA" TextColor="White"/>
+            <Entry Text="{Binding Titulo}" TextTransform="Uppercase" Background="#2c3e50" TextColor="white" Placeholder="Introduzca Titulo"/>
+                    <Entry Text="{Binding Descripcion}" BackgroundColor="#2c3e50" TextColor="white" Placeholder="Introduzca Tarea"/>
+                    <Entry Text="{Binding Estado}" BackgroundColor="#2c3e50" TextColor="white" Placeholder="Introduzca Estado"/>
             <Button Text="Agregar" Command="{Binding agregarCommand}"/>
+            <Button Text="Regresar al menú" Command="{Binding menuCommand}"/>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

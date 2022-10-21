@@ -83,7 +83,16 @@ namespace ListaTareas.VistaModelo
                 Estado = Estado
             });
             ListarTareasAll();
+            await Navigation.PushModalAsync(new Listas());
+
+        }
+        public async Task ListaGeneral()
+        {
             await Navigation.PushModalAsync(new PaginaPrincipal());
+        }
+        public async Task Lista()
+        {
+            await Navigation.PushModalAsync(new Listas());
         }
         public async Task VistaAgregar()
         {
@@ -99,6 +108,8 @@ namespace ListaTareas.VistaModelo
         #region COMANDOS
         public ICommand agregarCommand => new Command(AgregarTarea);
         public ICommand VistaCommand => new Command(async () => await VistaAgregar());
+        public ICommand ListaGeneralCommand => new Command(async () => await ListaGeneral());
+        public ICommand ListaCommand => new Command(async () => await Lista());
         #endregion
     }
 }

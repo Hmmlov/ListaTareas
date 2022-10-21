@@ -2,23 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ListaTareas.MainPage">
-
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
-
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="https://c1.wallpaperflare.com/preview/835/250/537/office-desk-computer-light.jpg" Aspect="AspectFill"/>
+            <BoxView Color="#a0699d" Opacity="0.8"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+                <Image Source="https://static.vecteezy.com/system/resources/previews/004/796/395/non_2x/task-icon-trendy-flat-task-icon-on-white-background-illustration-can-be-use-for-web-and-mobile-free-vector.jpg" 
+                       Grid.Row="0"
+                       WidthRequest="100" 
+                       HeightRequest="100" 
+                       Margin="0,50,0,30"/>
+                <StackLayout Grid.Row="1" Padding="30,20">
+                    <Entry Placeholder="Email" x:Name="txtEmail" PlaceholderColor="White"/>
+                    <Entry Placeholder="Password" x:Name="txtPassword" PlaceholderColor="White"/>
+                    <Button Text="Ingresar" x:Name="btnLogin" Clicked="Button_Clicked" BorderRadius="20" TextColor="#e0699d"/>
+                </StackLayout>
+        </Grid>
+    </Grid>
+    </ContentPage.Content>
 </ContentPage>
